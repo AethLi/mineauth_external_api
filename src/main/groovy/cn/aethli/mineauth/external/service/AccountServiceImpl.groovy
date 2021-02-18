@@ -3,6 +3,7 @@ package cn.aethli.mineauth.external.service
 import cn.aethli.mineauth.external.entity.Account
 import cn.aethli.mineauth.external.repository.AccountRepository
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.http.ResponseEntity
 import org.springframework.stereotype.Service
 
 @Service
@@ -12,6 +13,12 @@ class AccountServiceImpl implements AccountService {
 
     @Override
     Account getById(String id) {
-        return accountRepository.getById(id)
+        accountRepository.getById(id)
+    }
+
+    @Override
+    ResponseEntity saveOne(Account account) {
+        accountRepository.save(account)
+        ResponseEntity.ok().build()
     }
 }
