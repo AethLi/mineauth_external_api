@@ -18,7 +18,6 @@ class AccountServiceImpl implements AccountService {
 
     @Override
     ResponseEntity saveOne(Account account) {
-        accountRepository.save(account)
-        ResponseEntity.ok().build()
+        ResponseEntity.ok(accountRepository.save(account))
     }
 }

@@ -1,12 +1,11 @@
 package cn.aethli.mineauth.external.entity;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import javax.validation.Valid;
-import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import java.time.LocalDateTime;
@@ -15,6 +14,7 @@ import java.time.LocalDateTime;
 @Table(name = "PLAYER")
 @Getter
 @Setter
+@JsonInclude(value = JsonInclude.Include.NON_NULL)
 public class Account {
     @Id
     @Column(name = "ID")

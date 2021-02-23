@@ -24,6 +24,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-rest'
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.codehaus.groovy:groovy'
+    implementation 'commons-codec:commons-codec'
     implementation  'javax.validation:validation-api'
     implementation 'org.hibernate.validator:hibernate-validator'
     compileOnly 'org.projectlombok:lombok'

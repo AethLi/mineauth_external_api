@@ -1,4 +1,4 @@
-package cn.aethli.mineauth.external.model
+package cn.aethli.mineauth.external.model.Rest
 
 import cn.aethli.mineauth.external.entity.Account
 import org.springframework.data.rest.core.config.Projection

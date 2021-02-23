@@ -1,7 +1,7 @@
 package cn.aethli.mineauth.external.repository
 
 import cn.aethli.mineauth.external.entity.Account
-import cn.aethli.mineauth.external.model.AccountRest
+import cn.aethli.mineauth.external.model.Rest.AccountRest
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor
 import org.springframework.data.jpa.repository.Query

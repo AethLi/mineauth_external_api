@@ -29,7 +29,7 @@ class GlobeExceptionController {
         if (e instanceof MethodArgumentNotValidException) {
             new ResponseEntity<String>((((MethodArgumentNotValidException) e)
                     .getBindingResult().getFieldErrors().stream()
-                    .map({ it.getDefaultMessage() } as Function)
+                    .map({ it.getField()+it.getDefaultMessage() } as Function)
                     .collect(Collectors.joining(","))), HttpStatus.INTERNAL_SERVER_ERROR)
         } else if (e instanceof ConstraintViolationException) {
             List<String> msgList = new ArrayList<>()
